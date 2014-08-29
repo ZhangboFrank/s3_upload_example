@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 
+import sys
 import boto.s3
 
 from conf import region, bucket, key
 
+method = sys.argv[1]
+
 expires_in = 600
-method = 'PUT'
 
 headers = {}
 headers['x-amz-server-side-encryption-customer-algorithm'] = 'AES256'
