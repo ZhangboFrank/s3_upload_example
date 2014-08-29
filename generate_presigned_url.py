@@ -3,9 +3,11 @@
 import sys
 import boto.s3
 
-from conf import region, bucket, key, checksum_header_name, data_checksum
+from conf import key, checksum_header_name, data_checksum
 
-method = sys.argv[1]
+region = sys.argv[1]
+bucket = sys.argv[2]
+method = sys.argv[3]
 
 expires_in = 600
 
