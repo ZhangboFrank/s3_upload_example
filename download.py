@@ -7,7 +7,7 @@ import requests
 
 url = sys.argv[1]
 
-sse_key = '0' * 32
+from conf import sse_key
 
 sse_key_base64 = base64.standard_b64encode(sse_key)
 sse_key_md5 = hashlib.md5(sse_key).digest()
